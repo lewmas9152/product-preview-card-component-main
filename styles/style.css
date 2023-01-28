@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Montserrat:wght@500;700&display=swap');
+:root {
+  --very_dark_blue: hsl(212, 21%, 14%);
+  --dark_greyish_blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --dark_cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+picture{
+    display: flex;
+}
+img{
+    max-width: 100%;
+}
+body {
+  background-color: hsl(30, 38%, 92%);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color:var(--dark_greyish_blue) ;
+}
+.card {
+  background-color:hsl(0, 0%, 100%);
+  width: 90%;
+  max-width:600px ;
+  border-radius:5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  }
+  
+.card_content{
+    padding: 1rem;
+    max-width: 38ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.prices{
+    display: flex;
+    gap: 2rem;
+    margin:1rem 0;
+    
+}
+.product_price{
+color: var(--dark_cyan);
+font-family: 'Fraunces', serif;
+font-size: 2rem;
+}
+.product_initial_price{
+    text-decoration: line-through;
+    align-self: center;
+    
+}
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color:var(--dark_cyan) ;
+    border-radius:10px;
+    border: none;
+    padding: 1rem;
+    color:var(--white) ;
+    transition: all 400ms ease-in;
+}
+.button:hover{
+    cursor:pointer;
+    background-color: var(--very_dark_blue);
+
+}
+
+.product_header{
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+    line-height:1;
+    margin: 1rem 0;
+    color: var(--very_dark_blue);
+}
+.product_type{
+    text-transform:uppercase;
+    letter-spacing: 2px;
+}
+.product_description{
+    line-height:2 ;
+}
+@media screen and (min-width:570px) {
+    .card{
+        flex-direction:row;
+    } 
+    .card_content{
+        max-width: 30ch;
+    }   
+}
